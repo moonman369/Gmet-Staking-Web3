@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx hardhat test",
     "deploy-sepolia": "npx hardhat --network sepolia run scripts/deploy.js",
     "deploy-mumbai": "npx hardhat --network mumbai run scripts/deploy.js",
     "deploy-fuji": "npx hardhat --network fuji run scripts/deploy.js",
     "deploy-goerli": "npx hardhat --network goerli run scripts/deploy.js",
-    "deploy-bsc-test": "npx hardhat --network bsc run scripts/deploy.js"
+    "deploy-bsc-test": "npx hardhat --network bsc run scripts/deploy.js",
+    "deploy-thirdweb": "npx thirdweb deploy"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.1",
-    "dotenv": "^16.4.4"
+    "@thirdweb-dev/contracts": "^3.11.0",
+    "dotenv": "^16.4.4",
+    "thirdweb": "^0.13.40"
   }
 }
